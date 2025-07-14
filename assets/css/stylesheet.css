@@ -153,6 +153,7 @@ a:visited {color:rgb(255,244,230);}
     max-width: 1200px;
     margin-inline: auto;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .post-container img {

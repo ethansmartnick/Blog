@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../assets/css/stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Github Pages</title>
+    </head>
+
+    <body>
+        <header>
+                <nav class="projects-nav-main">
+                    <h1>Github Pages</h1>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../about.html">About</a></li>
+                    </ul>
+                </nav>
+        </header>
+        
+        <main class="post-container"> 
+            <h2>The Reasoning Behind My Decision</h2>
+            <p>This website is hosted using GitHub Pages!</p>
+            <br>
+            <p>The main reason I chose GitHub Pages over other hosting options is its simplicity. It took me maybe five minutes, if not less, to research and set up. I can host the site directly from the repository, and most of the workflow is practically automated. Pushing updates is essentially a one-click process. Since this is a purely static site (which aligns perfectly with GitHub Pages’ primary design) and has no backend—nor any plans for one—GitHub Pages was an ideal fit.</p>
+            <br>
+            <h2>How I Set It Up</h2>
+            <p>First of all, the repository of your choosing <strong><u>must be public</u></strong>. Private repositories do not have the option to be hosted. Also, GitHub Pages <strong><u>requires an index.html file</u></strong>. If this does not exist, you will be presented with an error seen at the end of this article.</p>
+            <img src="../assets/img/RepoPublic.jpg" alt="Public Repository">
+            <p>Once you have ensured your repo is public, go to the settings tab of your repository. Scroll down until you find the <strong>"Pages"</strong> section.</p>
+            <img src="../assets/img/FirstProjectRepoSettings.jpg" alt="Repository Settings">
+            <p>Next, under the Pages tab, click the source drop-down and select <strong>"GitHub Actions"</strong>.</p>
+            <img src="../assets/img/FirstProjectGitHubActions.jpg" alt="GitHub Actions">
+            <p>After that, you have two options: Jekyll or Static HTML. In this case, I'll be creating a static website, so I went with the static HTML workflow.</p>
+            <img src="../assets/img/FirstProjectStaticHTML.jpg" alt="Static HTML">
+            <p>You will then be presented with this page, which provides the source code for the workflow. In my case, this will be published under the main branch, so nothing will need to be changed here. The only thing I'll need to do is commit the changes with the green button on the top right.</p>
+            <img src="../assets/img/FirstProjectCommit.jpg" alt="Commit Changes">
+            <p>After you commit the changes, you can check the progress under the <strong>"Actions"</strong> tab. This takes about 10–30 seconds depending on folder size and server load. You will know the action is finished when there is a green checkbox next to it.</p>
+            <img src="../assets/img/FirstProjectAction.jpg" alt="Action Progress">
+            <img src="../assets/img/FirstProjectActionFinish.jpg" alt="Action Complete">
+            <p>And the website is now live! You can find the link in the same Pages tab under Settings we used before. The domain will be the same name as your repository. I'll cover custom domains in a different article because that's a project in itself.</p>
+            <img src="../assets/img/FirstProjectLink.jpg" alt="Live Link">
+            <img src="../assets/img/FirstProjectLive.jpg" alt="Live Website">
+            <h2>Errors and Troubleshooting</h2>
+            <p>As a side note: I found out the hard way while making a test site for this project that GitHub Pages actually requires an index.html file; otherwise, you will be presented with this error:</p>
+            <img src="../assets/img/FirstProjectError.jpg" alt="Error Page">
+            <p>Also note: <strong><u>This file is case sensitive!</u></strong> For example, Index.html will not work, while index.html will. So make sure this file is named correctly. You can find more troubleshooting info <u><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/troubleshooting-404-errors-for-github-pages-sites">at this link</a></u>.</p>
+            <br>
+        </main>
+
+
+
+
+
+
+</html>
