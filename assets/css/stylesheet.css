@@ -225,6 +225,7 @@ a:visited {color:rgb(255,244,230);}
 .resume-image {
     transition: 0.3s;
     filter: brightness(95%);
+    width: 60%;
 }
 
 .resume-image:hover,:focus {
