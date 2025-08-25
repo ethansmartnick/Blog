@@ -57,6 +57,24 @@ body {
     letter-spacing: 0.25rem;
 }
 
+.projects-nav-footer ul {
+    list-style: none;
+    font-size: 1.25rem;
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.projects-nav-footer h1 {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-left: 0.1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.25rem;
+}
+
 a:link {
     color: rgb(255, 244, 230);
     text-decoration: none;
@@ -154,12 +172,12 @@ a:visited {
 
 .post-container img {
     border-radius: 25px;
-    max-width: 60%;
+    max-width: 75%;
+    filter: brightness(80%);
+    display: block;
+    margin: 0 auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-left: 20%;
-    margin-right: 20%;
-    filter: brightness(80%);
 }
 
 .post-container h2 {
@@ -172,15 +190,44 @@ a:visited {
 .post-container p {
     text-align: center;
     font-size: 2rem;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 .post-container video {
-    width: 70%;
-    margin-left: 15%;
+    width: 75%;
+    display: block;
+    margin: 0 auto;
     filter: brightness(90%);
 }
+
+.bash {
+    background-color: #1e1e1e;
+    color: #c5c8c6;
+    border-radius: 6px;
+    font-family: "Courier New", "Fira Code", Consolas, Menlo, Monaco, monospace;
+    max-width: 75%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: auto;
+    text-wrap: nowrap;
+    }
+
+.bash li {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.bash h1 {
+    font-size: .75rem;
+    margin-left: 1rem;
+    color: #c5c8c6;
+    font-weight: lighter;
+}
+
 /* ========== ABOUT SECTION ========== */
 #about-portrait {
     /* Use 1:1 aspect ratio img, otherwise force with aspect-ratio: 1/1; */
@@ -355,6 +402,26 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.bash::-webkit-scrollbar {
+    width: 20px;
+}
+
+.bash::-webkit-scrollbar-track {
+    background: rgb(255, 244, 230);
+    border-radius: 50px;
+    margin-block: .5em;
+}
+
+.bash::-webkit-scrollbar-thumb {
+    background: rgb(133, 68, 66);
+    border-radius: 50px;
+    border: .15em solid rgb(255, 244, 230);
+}
+
+.bash::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 

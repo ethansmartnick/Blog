@@ -1,0 +1,81 @@
+>First step format flashdrive as fat32 and boot the linux ISO and copy files to th flashdrive so its bootable on a PC
+
+>Next choose PC.
+>Two options Intel G3 with 32GB of DDR4 a 6500 and no GPU, limited to two drives as its a non modular PSU also no upgradability as it propriotary hardware.
+>second option is my old gaming PC 4790k 16gb of ddr3 modular PSU gtx 970. 
+>cant swap components as the g3 is 1151 socket and old gaming pc is 1150
+>choosing g3 for now
+>will buy 1151 motherboard for old gaming pc and swap components later
+
+
+
+>configure DHCP range to give first IP addresses static IP
+
+
+>install two drive 
+>will use RAID 1 until upgrade as mirroring
+>plug and usb and boot from usb
+>install ubuntu and go through setup
+>use Static IP during setup
+>configure RAID 1
+>continue setup
+>user password, etc
+>reboot to finish install
+>login
+>server is now operational
+>sudo apt update
+
+
+>setup static ip for server once it shows on network
+>use MAC from ARP table 
+>set static IP using MAC and set IP
+
+>setup SSH cause i dont feel like walking over to the server
+
+>install Docker
+>install Docker compose plugin as immich requires it
+>install Immich
+
+>install Immich on android
+>login using server IP and port
+>must be connected to wifi
+>verify working
+
+
+>setup DDNS through cloudflare
+(theres a dynamic DNS setting in my router but I chose cloudflare for future proofing)
+>create API token with zone permissions
+>this will update the IP through cloudflare when it detects a change
+>create A record for existing domain
+>creater docker file
+>favonia/cloudflare-ddnss is the github distro
+>deploy and verify working
+>will check every 5 minutes so possibility of 5 minute down time
+>can check with docker logs
+>set IP wrong in cloudflare a record (eg. 8.8.8.8)
+>on initial docker startup it should correct the IP to your public IP
+
+
+>install OpenVPN on server
+>verify running
+>first time login with user "openvpn" and temp password created in log
+>route IP to newly created a record for the domain
+>forward UDP port 1194 in router to server
+>create new admin user
+>enable MFA
+>delete old Admin
+>in group policy settings
+>make sure subnet is the same as the docker subnet in ubuntu
+>otherwise you will not be able to route to immich docker IP
+>head to user UI instead of admin
+>download OVPN file
+>plug in android and transfer to phone THIS IS A KEY DO NOT PUT IN PUBLIC
+>import on openvpn app
+>delete OVPN file after profile set up
+
+>this setup is a good proof of concept but not secure
+>setup rootless docker
+
+
+
+
